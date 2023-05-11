@@ -4,10 +4,8 @@
 using namespace std;
 class Conejo{
     public:
-        string nom;
         int velocidad;
-    Conejo(const string nom,const int velocidad){
-        this->nom=nom;
+    Conejo(const int velocidad){
         this->velocidad=velocidad;
     }
     void presumir(){
@@ -15,6 +13,9 @@ class Conejo{
     }
     void aceptarreto(){
         cout<<"acepto\n";
+    }
+    string getNombre(){
+        return "conejo";
     }
 };
 class Fauna{
@@ -27,17 +28,19 @@ class Fauna{
 class Tortuga{
     public:
         int velocidad;
-        string expresion;
     Tortuga(const int _v):velocidad(_v){}
     void retar(){
         cout<<"Te reto conejo\n";
+    }
+    string getNombre(){
+        return "tortuga";
     }
 };
 class Carrera{
     public:
         int distancia;
     Carrera(){
-        distancia=20;
+        distancia=8;
     }
     void avanzar(const int velocidad){
         distancia=distancia-velocidad;
@@ -50,7 +53,7 @@ class Arbol{
     Arbol(){
         menosvelocidad=0;
     }
-    void modificarvelocidad(int vel){
+    void seduerme(int vel){
         vel=menosvelocidad;
     }
 };
